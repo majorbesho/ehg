@@ -1,0 +1,262 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700'); */
+:root{
+  --mainGold:#9fa31b;
+  --transparentGold:rgba(221, 183, 14, 0.7);
+  --mainWhite:#FFFFFF;
+  --mainBlack:#050608;
+  --mainGrey:rgb(216, 214, 214);
+  --mainYellow:#e3b505;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainBlack);
+}
+/* REM values to target root element 1REM = 16px */
+/*Nav*/
+.navbar{
+  background: var(--mainBlack);
+}
+.navbar-icon{
+font-size: 2rem;
+color: var(--mainGold)
+}
+.navbar-toggler{
+  outline-color: var(--mainGold)!important;
+}
+.nav-link{
+  color: var(--mainGold)!important;
+  text-transform:capitalize ;
+}
+.nav-link:hover {
+  color: var(--mainBlack) ;
+  
+}
+.nav-icon{
+  font-size: 1.5rem;
+  text-decoration:none ;
+  color:var(--mainGold);
+  transition-property:color ;
+  transition-duration: 2s;
+  transition-timing-function:linear ;
+}
+.nav-icon:hover{
+  color: var(--mainWhite); 
+}
+/*header*/ 
+.header{
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    color: var(--mainWhite);
+    overflow: hidden;
+    
+}
+.carousel-item {
+  height: 550px;
+}
+.carousel-item img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 550px;
+}
+
+.height-max{
+min-height:calc(100vh - 100px);
+
+/* background-image: url('../img/1/32.jpg'); */
+background-position: left;
+background-repeat: no-repeat;
+background-size: cover;
+animation-name: zoom;
+animation-duration: 20s;
+animation-delay: 5s;
+animation-iteration-count: infinite;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2) translateX(-5%)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+.title-heading {
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 0.3rem solid var(--mainBlue);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+
+@media screen and (min-width:768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+.title-icon {
+  color: var(--mainBlue);
+  text-decoration: none !important;
+}
+.title-icon:hover {
+  color: var(--mainBlue);
+  opacity: 0.6;
+}
+
+/*skilles*/
+.section-title--special{
+background: var(--transparentGold);
+color: var(--mainWhite);
+padding: 0.5rem 2rem;
+clip-path: polygon(10% 0 ,100% 0 ,90% 100%,0 100%);
+
+}
+.skills{
+  background: var(--mainWhite);
+}
+.Skills-title{
+ background: var(--mainWhite);
+ 
+}
+.skills-icon{
+  font-size: 3rem;
+  color: var(--mainYellow);
+  background: var(--mainBlack);
+
+}
+.skills-icon:hover {
+  
+  color: var(--mainYellow);
+  background: var(--mainWhite);
+
+}
+.skills-underline{
+  width: 4rem;
+  height: 0.3rem;
+  background:var(--mainGold) ;
+  margin: 1rem auto;
+}
+.company{
+  background: var(--mainGrey);
+
+}
+.company-card{
+  border-radius:0.!important;
+}
+.company-img {
+border-top-left-radius:0 ;
+border-top-right-radius:0;
+}
+.company-value {
+background: var(--mainWhite);
+color: rgb(216, 131, 131);
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+-webkit-clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+
+transition: all 1s linear;
+
+}
+.company-value:hover {
+ clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+ -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* services section */
+
+.services {
+  background: var(--mainGrey);
+  position: relative;
+  min-height: 85vh;
+  max-width: 95vw;
+  margin: 0 auto;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+.video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--transparentBlue);
+  z-index: -2;
+}
+
+.service {
+  background: var(--mainGrey);
+  color: var(--mainWhite);
+  transition: all 1s ease-in-out;
+}
+
+.service:hover {
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  padding-left: 2.2rem !important
+}
+
+.service-icon {
+  font-size: 4rem;
+  color: var(--mainYellow);
+}
+
+.customer-card-body {
+  margin-top: -4rem !important;
+  color: var(--mainGrey);
+}
+
+.customer-img {
+  border: 0.4rem solid var(--mainWhite);
+}
+
+.customer-name {
+  color: var(--mainBlue);
+  margin: 0.5rem;
+}
+
+.customer-icon {
+  font-size: 2rem;
+  color: var(--mainGrey);
+}
+
+.customer-quote {
+  max-width: 90%;
+}
+
+/* footer icons */
+.footer {
+  background: var(--mainBlack);
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--mainYellow);
+  transition: all 1s ease-in-out;
+}
+
+.footer-icon:hover {
+  color: var(--mainBlue);
+}
